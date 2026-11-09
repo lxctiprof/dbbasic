@@ -1,0 +1,95 @@
+[
+  {
+    "no": 1,
+    "q": "오라클, postgreSQL등은 대표적인 RDBMS이다. 여기서 R이 뜻하는 것은?",
+    "img": "",
+    "a1": "Region",
+    "a2": "Reason",
+    "a3": "Relation",
+    "a4": "Repeat",    
+    "ans": 3
+  }
+  , {
+  "no": 2,
+  "q": "두 테이블 간에 관계를 맺을 때, 자료를 제공하는 테이블에 있는 자료만 사용하도록 강제하는 것은?",
+  "img": "",
+  "a1": "기본 키(Primary Key)",
+  "a2": "외래 키(Foreign Key)",
+  "a3": "UNIQUE",
+  "a4": "NOT NULL",    
+  "ans": 2
+  }
+  , {
+  "no": 3,
+  "q": "constraint FK_DOGUN_SURVEYOR foreign key (surveyor) references surveyors(name) 의 SQL 구문으로 FK를 걸었다고 한다. 이 경우 자료를 제공하는 테이블의 이름은?",
+  "img": "",
+  "a1": "surveyor",
+  "a2": "FK_DOGUN_SURVEYOR",
+  "a3": "surveyors",
+  "a4": "name",
+  "ans": 3
+  }
+  , {
+  "no": 4,
+  "q": "관계형 DB에서 자료를 제공하는 테이블 A에 '짜장', '짬뽕', '탕수육', 이렇게 3개의 데이터가 있다. 이 테이블과 Foreign Key로 연결된 필드에 '깐풍기'를 입력하면 어떻게 되나?",
+  "img": "",
+  "a1": "문제없이 입력된다.",
+  "a2": "DBMS가 '없는 자료지만 입력하겠다는 확인'을 받은 후 입력한다.",
+  "a3": "테이블 A에 '깐풍기'가 자동으로 입력되고, 이 입력 건도 처리된다.",
+  "a4": "에러가 나며 자료 입력이 거절된다.",
+  "ans": 4
+  }
+
+  , {
+  "no": 5,
+  "q": "그림과 같이 테이블이 관계를 맺고 있을 때, 2개의 테이블을 join 하는 이유는?",
+  "img": "../attachments/20261108133759.png",
+  "a1": "각 도근점을 측량한 측량자의 ID가 아닌 이름으로 제대로 보여주기 위해",
+  "a2": "join 하지 않으면 에러가 발생하기 때문",
+  "a3": "각 도근에 대한 정보는 보안 사항이기 때문",
+  "a4": "측량자 테이블은 일반적으로 접근 불가사항이기 때문",
+  "ans": 1
+  }
+  , {
+  "no": 6,
+  "q": "테이블 A의 food 필드와 테이블 B의 id 필드를 join 하는 코드로 옳은 것은?",
+  "img": "",
+  "a1": "select * from A, B on A.food = B.id",
+  "a2": "select * from A join B on A.food = B.id",
+  "a3": "select * from A join B where A.food = B.id",
+  "a4": "select * from A, B where A.food on B.id",
+  "ans": 2
+  }
+  , {
+  "no": 7,
+  "q": "그림은 어떤 join query의 결과이다. 그 결과에 똑같이 name이 여러 개 보여 어떤 필드인지 명확하게 하고 싶을 때 이름을 바꿀 때 사용하는 것은?",
+  "img": "../attachments/20261108140309.png",
+  "a1": "nickname",
+  "a2": "on",
+  "a3": "alias",
+  "a4": "rename",
+  "ans": 3
+  }
+  , {
+  "no": 8,
+  "q": "그림과 같은 테이블에서 select * from address where name = '박길동' or name = '홍길동' 의 쿼리 결과는 총 몇 줄인가?",
+  "img": "../attachments/20261108141740.png",
+  "a1": "0줄",
+  "a2": "1줄",
+  "a3": "2줄",
+  "a4": "3줄",
+  "ans": 4
+  }
+  , {
+  "no": 9,
+  "q": "그림과 같은 테이블에서 select * from address where name = '박길동' and name = '홍길동' 의 쿼리 결과는 총 몇 줄인가?",
+  "img": "../attachments/20261108141740.png",
+  "a1": "0줄",
+  "a2": "1줄",
+  "a3": "2줄",
+  "a4": "3줄",
+  "ans": 1
+  }
+
+
+]

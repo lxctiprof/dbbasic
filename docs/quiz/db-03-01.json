@@ -138,4 +138,144 @@
   "a4": "drop table members",
   "ans": 4
   }
-  ]
+  , {
+  "no": 15,
+  "q": "CRUD에 대해 잘못 설명한 것은?",
+  "img": "",
+  "a1": "Create(생성): create",
+  "a2": "Read(읽기): select",
+  "a3": "Update(수정): update",
+  "a4": "Delete(삭제): delete",
+  "ans": 1
+  }
+  , {
+  "no": 16,
+  "q": "다음 중 dogun 테이블의 전체 내용을 보는 sql 구문은?",
+  "img": "",
+  "a1": "select dogun",
+  "a2": "select * from table godun",
+  "a3": "select * from dogun table",
+  "a4": "select * from dogun",
+  "ans": 4
+  }
+  , {
+  "no": 17,
+  "q": "다음 중 dogun 테이블에서 x, y, name 필드의 내용을 보는 sql 구문은?",
+  "img": "",
+  "a1": "select * from dogun",
+  "a2": "select x, y, name",
+  "a3": "select x, y, name from dogun",
+  "a4": "select * from x, y, name",
+  "ans": 3
+  }
+  , {
+  "no": 18,
+  "q": "다음 sql 구문 중 조건에 따른 검색을 할 때 사용하는 구문은?",
+  "img": "",
+  "a1": "or",
+  "a2": "like",
+  "a3": "where",
+  "a4": "in",
+  "ans": 3
+  }
+  , {
+  "no": 19,
+  "q": "다음 중 name 필드의 값이 '도근점2'인 자료를 찾는 sql 구문은?",
+  "img": "",
+  "a1": "select * from dogun = '도근점2'",
+  "a2": "select * from dogun where name = '도근점2'",
+  "a3": "select * from dogun name '도근점2'",
+  "a4": "select * from dogun name = '도근점2'",
+  "ans": 2
+  }
+  , {
+  "no": 20,
+  "q": "postgreSQL에서 like 연산자와 함께 모든 문자라는 뜻으로 쓰이는 기호는?",
+  "img": "",
+  "a1": "!",
+  "a2": "A",
+  "a3": "%",
+  "a4": "&",
+  "ans": 3
+  }
+  , {
+  "no": 21,
+  "q": "쿼리할 떄 검색결과에 나오는 순서를 정하려 한다. name 필드는 정순으로, age 필드는 역순으로 정렬하는 sql 구문은?",
+  "img": "",
+  "a1": "order by name, age",
+  "a2": "order by name, age ^",
+  "a3": "order by name asc, age desc",
+  "a4": "order by name asc, desc age",
+  "ans": 3
+  }
+  , {
+  "no": 22,
+  "q": "update dogun set name = '도근3' 과 같이 sql 문을 만들고 실행하면 어떤 일이 벌어질까?",
+  "img": "",
+  "a1": "where 로 어떤 자료가 수정될지 정하지 않아 에러 발생",
+  "a2": "where 로 어떤 자료가 수정될지 정하지 않아 dogun 테이블의 모든 자료의 name 필드 값이 '도근3'으로 변경됨",
+  "a3": "이름이 '도근3'인 자료만 수정된다.",
+  "a4": "이 코드로는 아무런 일도 벌어지지 않는다.",
+  "ans": 2
+  }
+  , {
+  "no": 23,
+  "q": "다음 중 name 필드의 값이 '도근3'인 자료를 삭제하는 sql 구문은?",
+  "img": "",
+  "a1": "delete dogun where name = '도근3'",
+  "a2": "delete dogun name = '도근3",
+  "a3": "delete from dogun name = '도근3'",
+  "a4": "delete from dogun where name = '도근3'",
+  "ans": 4
+  }
+  , {
+  "no": 24,
+  "q": "데이터가 아래 그림과 같은 상태일 때, delete from dogun where name='도근점 4' 를 실행하면 어떤 결과가 나올까?",
+  "img": "../attachments/20261107235218.png",
+  "a1": "name이 도근점 4인 맨 첫 번째 자료 하나만 삭제된다.",
+  "a2": "삭제할 데이터가 너무 많아 에러가 난다.",
+  "a3": "name이 도근점 4인 3개의 자료 중 하나만 무작위로 삭제된다.",
+  "a4": "name이 도근점 4인 3개의 자료 모두 삭제된다.",
+  "ans": 4
+  }
+  , {
+  "no": 25,
+  "q": "어떤 사이트에서 데이터 입력할 때 어떤 항목들은 *표로 표시해 반드시 입력해야 하는 항목이라는 표시를 한다. 이렇게 반드시 입력해야 하는 항목으로, 만약 입력하지 않으면 DBMS에서 입력 자체가 거절되도록 하는 방법은?",
+  "img": "",
+  "a1": "UNIQUE",
+  "a2": "NOT NULL",
+  "a3": "NULL",
+  "a4": "VARCHAR(10)",
+  "ans": 2
+  }
+  , {
+  "no": 26,
+  "q": "DB에서 사번처럼 이 필드의 값은 다른 어떤 행과도 같은 값이 되면 안되는 경우 걸어주는 제약조건은?",
+  "img": "",
+  "a1": "UNIQUE",
+  "a2": "NOT NULL",
+  "a3": "NULL",
+  "a4": "VARCHAR(10)",
+  "ans": 1
+  }
+  , {
+  "no": 27,
+  "q": "UNIQUE + NOT NULL의 형태로 그 테이블에서 주민등록번호처럼 각 데이터를 대표하는 것은?",
+  "img": "",
+  "a1": "기본키",
+  "a2": "외래키",
+  "a3": "키",
+  "a4": "후보키",
+  "ans": 1
+  }
+  , {
+  "no": 28,
+  "q": "postgreSQL에서 ID의 값을 자동으로 증가시키는 방법은?",
+  "img": "",
+  "a1": "integer",
+  "a2": "float8",
+  "a3": "bigiint",
+  "a4": "serial",
+  "ans": 4
+  }
+]
