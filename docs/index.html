@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>공간정보 DB 기본 - 웹프로그래밍 기본</title>
+        <title>데이터베이스 개념 - 웹프로그래밍 기본</title>
 
 
         <!-- Custom HTML head -->
@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-20340009.js";
+            window.path_to_searchindex_js = "searchindex-cd491a0b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-51032195.js"></script>
+        <script src="toc-5944e2ac.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,14 +175,168 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="공간정보-db-기본"><a class="header" href="#공간정보-db-기본">공간정보 DB 기본</a></h1>
+                        <h1 id="데이터베이스개념"><a class="header" href="#데이터베이스개념">데이터베이스개념</a></h1>
+<h2 id="데이터베이스"><a class="header" href="#데이터베이스">데이터베이스</a></h2>
+<h3 id="정의"><a class="header" href="#정의">정의</a></h3>
+<ul>
+<li>데이터의 집합</li>
+<li>개인이 데이터를 정리하기 위해 시작했지만 이후로는 주로 여러 명이 데이터를 공유하기 위한 목적으로 데이터를 모아 놓은 것을 말함</li>
+</ul>
+<h3 id="dbms"><a class="header" href="#dbms">DBMS</a></h3>
+<ul>
+<li>
+<p>DataBase Management System : 데이터베이스를 관리하는 시스템</p>
+</li>
+<li>
+<p>여러 명이 접속해서 데이터베이스(자료)를 입력하고 사용할 수 있도록 해 주는 시스템</p>
+<ul>
+<li>oracle</li>
+<li>mysql</li>
+<li>ms-sql</li>
+<li>postgreSQL</li>
+</ul>
+</li>
+</ul>
+<h2 id="dbms-vs-db"><a class="header" href="#dbms-vs-db">DBMS vs DB</a></h2>
+<ul>
+<li>
+<p>DBMS: DataBase Management System</p>
+</li>
+<li>
+<p>DB: DataBase</p>
+</li>
+</ul>
+<p>DB를 잘 관리하도록 해주는 시스템(프로그램)이 DBMS.</p>
+<h2 id="postgresql"><a class="header" href="#postgresql">postgreSQL</a></h2>
+<ul>
+<li>
+<p>발음: [포스트그레스큐엘]   [포스트그레스] 혹은 [포스트그레]라고도</p>
+</li>
+<li>
+<p>무료</p>
+</li>
+<li>
+<p>open source</p>
+</li>
+<li>
+<p>상용에 준하는 성능과 기능</p>
+</li>
+<li>
+<p>ORDBMS(Object-Relational DBMS)</p>
+</li>
+<li>
+<p>postgis 라는 공간정보에 특화된 확장 기능 제공</p>
+<ul>
+<li>공사가 postgreSQL을 잘 알아야 하는 이유</li>
+</ul>
+</li>
+</ul>
+<h3 id="postgresql의-공간정보-특화-기능"><a class="header" href="#postgresql의-공간정보-특화-기능">postgreSQL의 공간정보 특화 기능</a></h3>
+<ul>
+<li>
+<p>postgis라는 extension을 이용해 아래 공간정보 특화 기능 처리</p>
+</li>
+<li>
+<p>점 하나, 선 하나, 면 하나 정보 처리</p>
+</li>
+<li>
+<p>점 여러 개, 선 여러 개, 면 여러 개 정보를 하나의 자료로 처리</p>
+</li>
+<li>
+<p>좌표체계간 변환(중부원점 ↔ WGS84)</p>
+</li>
+<li>
+<p>공간정보 계산</p>
+<ul>
+<li>
+<p>곡면을 고려한 거리, 면적 계산
+<label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261109015054.png" alt=""><span class="img-wrapper"><img src="attachments/20261109015054.png" alt=""></span></label></p>
+</li>
+<li>
+<p>점A가 면 B 안에 포함되는지 여부 확인
+<label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261109015138.png" alt=""><span class="img-wrapper"><img src="attachments/20261109015138.png" alt=""></span></label></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="ai-시대-데이터베이스를-배우는-이유"><a class="header" href="#ai-시대-데이터베이스를-배우는-이유">AI 시대 데이터베이스를 배우는 이유</a></h2>
+<ul>
+<li>코딩은 AI가 해준다. 자료 저장만 되면 내가 직접 꽤 그럴듯한 프로그램을 만들어 볼 수 있을텐데</li>
+</ul>
+<h3 id="실-사례-아이-영어-단어-외우기-앱을-만들어-아이-공부에-활용"><a class="header" href="#실-사례-아이-영어-단어-외우기-앱을-만들어-아이-공부에-활용">(실 사례) 아이 영어 단어 외우기 앱을 만들어 아이 공부에 활용</a></h3>
+<ul>
+<li>
+<p>아이가 너무 좋아함. 엄마랑 같이 만드는 영어 공부 앱.</p>
+</li>
+<li>
+<p>재밌는 영어 공부 앱</p>
+</li>
+<li>
+<p>(단점) 학습 기록을 남기지 못한다. DB를 몰라서.</p>
+</li>
+</ul>
+<h3 id="ai-시대-직접-프로그램-만들기-위해-필요한-지식"><a class="header" href="#ai-시대-직접-프로그램-만들기-위해-필요한-지식">AI 시대 직접 프로그램 만들기 위해 필요한 지식</a></h3>
+<ul>
+<li>기존과 달리 비개발자도 IT 지식이 필요해졌다.
+<ul>
+<li>보안
+<ul>
+<li>어플리케이션 보안</li>
+<li>네트워크 보안</li>
+<li>DB 보안</li>
+</ul>
+</li>
+<li>웹서버 인프라</li>
+<li>데이터베이스</li>
+</ul>
+</li>
+</ul>
+<h3 id="그런데-데이터베이스는-배우기-만만치-않다"><a class="header" href="#그런데-데이터베이스는-배우기-만만치-않다">그런데 데이터베이스는 배우기 만만치 않다.</a></h3>
+<ul>
+<li>
+<p>개념이 매우 추상적</p>
+</li>
+<li>
+<p>SQL이라는 새로운 프로그래밍 언어 비슷한 걸 배워야 한다.</p>
+</li>
+</ul>
+<h3 id="ai-시대에-돈-버는-회사"><a class="header" href="#ai-시대에-돈-버는-회사">AI 시대에 돈 버는 회사</a></h3>
+<ul>
+<li>
+<p>프로그램을 잘 만드는 회사(X)</p>
+</li>
+<li>
+<p>데이터를 많이 쌓아놓은 회사(O)</p>
+</li>
+<li>
+<p>인프라, 브랜드를 구축해 놓은 회사(O)</p>
+<ul>
+<li>유통망</li>
+<li>많은 회원</li>
+<li>많은 사용 경험(입소문, 후기 등)</li>
+</ul>
+</li>
+</ul>
+<h2 id="강사가-만든-가장-간단한-데이터베이스-프로그램"><a class="header" href="#강사가-만든-가장-간단한-데이터베이스-프로그램">(강사가 만든) 가장 간단한 데이터베이스 프로그램</a></h2>
+<h3 id="팟캐스트-몰아듣기정주행-앱-개발"><a class="header" href="#팟캐스트-몰아듣기정주행-앱-개발">팟캐스트 몰아듣기(정주행) 앱 개발</a></h3>
+<ul>
+<li>약 100개의 회차를 가진 팟캐스트를 1화부터 쭉 이어듣고 싶었음</li>
+<li>프로그램이 꺼질 때 다음 2개 정보를 저장
+<ul>
+<li>프로그램 회차</li>
+<li>재생 위치</li>
+<li>예: [2회차 07:10]</li>
+</ul>
+</li>
+<li>프로그램이 시작되면 데이터베이스에서 그 2개 정보를 가져와 마지막 들은 곳부터 재생 시작</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
 
-                            <a rel="next prefetch" href="db01.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="db01-practice01.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -193,7 +347,7 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
 
-                    <a rel="next prefetch" href="db01.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="db01-practice01.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>
